@@ -1,0 +1,39 @@
+h1 {
+    font-size: 300%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.border {
+    border-width: 3px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 0px 25px 0px 25px;
+    text-align: center;
+    box-shadow: 5px 5px black;
+
+    margin: 20px;
+    padding: 20px;
+}
+
+span {
+    font-size: 50px;
+}
+
+.offset1 {
+    position: relative;
+    left: 0%;
+    top: 20px
+}
+
+.offset2 {
+    position: relative;
+    left: 0%;
+    top: 40px
+}
+
+.margined {
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 50px;
+}
