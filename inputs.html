@@ -22,9 +22,10 @@
         <h1>user info</h1>
         <br>
         <h3>user details form</h3>
+        <h2 id="dataout">NO DATA TO REVIEW</h2>
         <br>
 
-        <form action="" class="myform" onsubmit="savedata()">
+        <form action="" class="myform" id="myform" onsubmit="savedata()">
             <label for="first-name">first name</label>
             <input type="text" name="first-name" id="first-name">
             <br>
@@ -43,6 +44,7 @@
 </body>
 
 <script>
+    document.getElementById('dataout').innerHTML = 'you are ' + localStorage.getItem("data")
 
     function savedata() {
         var name = document.getElementById("first-name").value
