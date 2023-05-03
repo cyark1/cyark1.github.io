@@ -1,0 +1,29 @@
+body {
+    background-color: lightgrey;
+    border: 2px solid darkred;
+    padding: 20px;
+}
+
+h1 {
+    color: darkred;
+    font-size: 300%;
+}
+
+p {
+    color: crimson;
+    font-size: 120%;
+}
+
+.arial {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+code {
+    color: limegreen;
+    background-color: darkgreen;
+}
+
+video {
+    border: 3px solid black;
+}
