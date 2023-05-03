@@ -1,17 +1,50 @@
 body {
+    background-color: lightgray;
+}
+
+.main {
     background-color: lightgrey;
     border: 2px solid darkred;
     padding: 20px;
 }
 
+@keyframes h1-anim {
+    0% {
+        padding: 0px;
+        background-color: lightgray;
+        margin: 200px;
+        font-size: 0px;
+    }
+
+    100% {
+        padding: 20px;
+        background-color: white;
+        margin: 100px 40px 20px 40px;
+    }
+}
+
 h1 {
+
+    animation-name: h1-anim;
+    animation-duration: 1s;
+
     color: darkred;
     font-size: 300%;
+    text-align: center;
+    background-color: white;
+
+    padding: 20px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 0px 20px 0px 20px;
+    margin: 100px 40px 20px 40px;
+    box-shadow: 5px 5px black;
 }
 
 p {
     color: crimson;
     font-size: 120%;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .arial {
@@ -26,4 +59,39 @@ code {
 
 video {
     border: 3px solid black;
+}
+
+a {
+    color: darkblue
+}
+
+a:hover {
+    color: cornflowerblue;
+}
+
+li {
+    display: inline;
+    background-color: lightgray;
+    padding: 10px;
+}
+
+ul {
+    background-color: white;
+
+    border: 2px solid darkred;
+    padding: 20px;
+
+    list-style-type: none;
+
+    position: fixed;
+    left: -10px;
+    margin: 0px;
+    top: 0;
+    width: 100%;
+
+}
+
+input {
+    margin: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }

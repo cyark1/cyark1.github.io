@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesv1.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <ul>
+        <p>NAV BAR </p>
+        <li><a href="./index.html">to first page</a></li>
+        <li><a href="./otherpage.html">to second page</a></li>
+        <li><a href="./inputs.html">to inputs</a></li>
+    </ul>
+
+    <div class="main">
+        <h1>user info</h1>
+        <br>
+        <h3>user details form</h3>
+        <br>
+
+        <form action="" class="myform" onsubmit="savedata()">
+            <label for="first-name">first name</label>
+            <input type="text" name="first-name" id="first-name">
+            <br>
+            <label for="last-name">last name</label>
+            <input type="text" name="last-name" id="last-name">
+            <br>
+            <label for="birthday">birthday</label>
+            <input type="date" name="birthday" id="birthday">
+            <br>
+            <input type="submit" name="submit" id="submit">
+            <button type="button" onclick="readdata()">review submission</button>
+        </form>
+
+
+    </div>
+</body>
+
+<script>
+
+    function savedata() {
+        var name = document.getElementById("first-name").value
+        var lastname = document.getElementById('last-name').value
+        var birthday = document.getElementById('birthday').value
+        alert("saved: " + name + " " + lastname + " born " + birthday)
+        localStorage.data = name + " " + lastname + " born " + birthday;
+    }
+
+    function readdata() {
+        alert(localStorage.getItem("data"))
+    }
+
+</script>
+
+</html>
