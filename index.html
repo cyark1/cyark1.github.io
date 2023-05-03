@@ -10,39 +10,51 @@
 </head>
 
 <body>
-    <header role="banner">
-        <h2>html5 test</h2>
+
+    <nav>
+        <p>NAV BAR </p>
+        <a href="./otherpage.html">to second page</a>
+    </nav>
+    <div class="main">
+        <header role="banner">
 
 
-        <h1>hi! this is the title :-)</h1>
-        <div>
-            <p>gotta write a bio here, but dont really know what to say.</p>
-            <p>take a doggo!</p>
-            <img src="https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=0.752xw:1.00xh;0.175xw,0&resize=1200:*"
-                alt="dog" width="200" class="dog">
-            <p>heck, take a video of a flower!!</p>
-            <video width="500" controls>
-                <source src="flower.webm" type="video/webm" onerror="videoerror()">
-            </video>
-            <div>verry bloomy.</div>
+            <h1>hi! this is the title :-)</h1>
+            <div>
+                <p>gotta write a bio here, but dont really know what to say.</p>
+                <p>take a doggo!</p>
+                <img src="https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=0.752xw:1.00xh;0.175xw,0&resize=1200:*"
+                    alt="dog" width="200" class="dog">
+                <p>heck, take a video of a flower!!</p>
+                <video width="500" controls>
+                    <source src="flower.webm" type="video/webm" onerror="videoerror()">
+                </video>
+                <div>verry bloomy.</div>
 
-            <p>ever heard of <a href="https://xkcd.com/">xkcd.com</a>?</p>
+                <p>ever heard of <a href="https://xkcd.com/">xkcd.com</a>?</p>
 
-        </div>
+            </div>
 
-        <p>this page should be tested across browsers <br>to check if things like the prior break (<code>br</code>)
-            tag... well... <em>break</em> cross-platform.</p>
-        <p class="arial black">this here, on the other hand, is a font test, written in arial (and coloured black in a
-            similar
-            way)
-            using a <code>font-family</code> css property targeting a a <code>class</code> tag</p>
-    </header>
-    <footer>
-        <p>link to the tutorial I got this from: <a href="http://tutorialspoint.com/">here</a></p>
-    </footer>
+            <p>this page should be tested across browsers <br>to check if things like the prior break (<code>br</code>)
+                tag... well... <em>break</em> cross-platform.</p>
+            <p class="arial black">this here, on the other hand, is a font test, written in arial (and coloured black in
+                a
+                similar
+                way)
+                using a <code>font-family</code> css property targeting a a <code>class</code> tag</p>
+        </header>
+        <footer>
+            <p>link to the tutorial I got this from: <a href="http://tutorialspoint.com/">here</a></p>
+        </footer>
+    </div>
 </body>
 
 <script>
+
+    function calculatesum() {
+
+    }
+
     function videoerror() {
         alert("video error! could not load")
     }
