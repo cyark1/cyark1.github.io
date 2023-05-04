@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesv1.css">
+    <title>second page</title>
+</head>
+
+<body>
+
+    <ul>
+        <p class="navtitle">NAV BAR </p>
+        <li><a href="./index.html" class="nav">to first page</a></li>
+        <li><a href="./otherpage.html" class="nav">to second page</a></li>
+        <li><a href="./inputs.html" class="nav">to inputs</a></li>
+        <li><a href="./datastorage.html" class="nav">to datastorage</a></li>
+    </ul>
+
+    <div class="main">
+        <h1>DATASTORAGE <br> (html web storage gui)</h1>
+        <br>
+        <p>all info is stored on your browser (like a cookie)</p>
+        <p>noted data containers:</p>
+        <p id="containers">CONTAINERS</p>
+        <br>
+        <p>read data:</p>
+        <p id="readout">[READOUT]</p>
+        <br>
+        <form action="" class="datastoragein" id="datastoragein" onsubmit="save()">
+            <label for="container">target container</label>
+            <input type="text" name="container" id="container" placeholder=" thing being read/written to" size="22">
+            <br>
+            <label for="data">data</label>
+            <input type="text" name="data" id="data" placeholder="whats being written" size="15">
+            <br>
+            <input type="submit" name="submit" id="submit" value="create/overwrite container">
+            <button type="button" onclick="readcontainer()">read target container</button>
+            <button type="button" onclick="notecontainer()">note container</button>
+            <br>
+            <br>
+            <button type="button" onclick="clearsaved()">clear all saved data</button>
+        </form>
+    </div>
+</body>
+
+<script>
+    document.getElementById('containers').innerHTML = localStorage.getItem('containerlist')
+
+    function save() {
+
+        var container = document.getElementById("container").value
+        var data = document.getElementById("data").value
+
+        localStorage.setItem(container, data)
+    }
+    function readcontainer() {
+        var container = document.getElementById("container").value
+        document.getElementById("readout").innerHTML = localStorage.getItem(container)
+    }
+    function notecontainer() {
+        var container = document.getElementById("container").value
+        console.log(container)
+
+
+        if (localStorage.getItem("containerlist") === null) {
+            var listofcontainers = "saved containers:"
+        }
+        else {
+            var listofcontainers = localStorage.getItem("containerlist")
+            console.log(listofcontainers)
+        }
+
+        var final = listofcontainers + " " + container
+        alert(final)
+        localStorage.setItem('containerlist', final)
+        document.getElementById('containers').innerHTML = localStorage.getItem('containerlist')
+    }
+    function clearsaved() {
+        alert("clearing")
+        localStorage.clear()
+        window.location.reload()
+    }
+
+</script>
+
+</html>
