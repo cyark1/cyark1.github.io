@@ -47,11 +47,6 @@ p {
     font-family: 'Times New Roman', Times, serif;
 }
 
-.arial {
-    color: black;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 code {
     color: limegreen;
     background-color: darkgreen;
@@ -80,19 +75,18 @@ ul {
     padding: 20px;
 
     list-style-type: none;
-
     position: fixed;
     left: -10px;
     margin: 0px;
     top: 0;
     width: 100%;
-
 }
 
 .nav {
     color: black;
     font-family: 'Times New Roman', Times, serif;
     text-decoration: none;
+    white-space: nowrap;
 }
 
 .nav:hover {

@@ -15,7 +15,6 @@
         <p class="navtitle">NAV BAR </p>
         <li><a href="./index.html" class="nav">to first page</a></li>
         <li><a href="./otherpage.html" class="nav">to second page</a></li>
-        <li><a href="./inputs.html" class="nav">to inputs</a></li>
         <li><a href="./datastorage.html" class="nav">to datastorage</a></li>
     </ul>
 
@@ -29,14 +28,14 @@
         <p>read data:</p>
         <p id="readout">[READOUT]</p>
         <br>
-        <form action="" class="datastoragein" id="datastoragein" onsubmit="save()">
+        <form action="" class="datastoragein" id="datastoragein">
             <label for="container">target container</label>
             <input type="text" name="container" id="container" placeholder=" thing being read/written to" size="22">
             <br>
             <label for="data">data</label>
             <input type="text" name="data" id="data" placeholder="whats being written" size="15">
             <br>
-            <input type="submit" name="submit" id="submit" value="create/overwrite container">
+            <button type="button" onclick="save()">create/overwrite container</button>
             <button type="button" onclick="readcontainer()">read target container</button>
             <button type="button" onclick="notecontainer()">note container</button>
             <br>
@@ -55,6 +54,7 @@
         var data = document.getElementById("data").value
 
         localStorage.setItem(container, data)
+        alert('saved ' + data + ' to ' + container)
     }
     function readcontainer() {
         var container = document.getElementById("container").value
